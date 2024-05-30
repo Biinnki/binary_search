@@ -1,11 +1,14 @@
 fn main() {
-    let list: [u8; 5] = [0, 2, 5, 8, 14];
+    let list: [u8; 10] = [2, 4, 6, 12, 23, 85, 106, 167, 211, 255];
+    let target: u8 = 211;
+    binary_search(list, target);
+}
+
+fn binary_search(list:[u8; 10], target:u8) {
     let mut left: u8 = 0;
     let mut right: u8 = list.len() as u8;
     let mut middle: u8;
     
-    let target: u8 = 13;
-
     let mut iter_counter: u8 = list.len() as u8;
 
     while true {
